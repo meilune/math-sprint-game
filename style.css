@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/upm5glu.css");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6,6 +7,10 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  font-family: caraque-solid,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
 }
 
 body::before {
@@ -20,6 +25,12 @@ body::before {
   bottom: 0px;
   left: 0px;
   opacity: 0.4;
+}
+
+h1, h2 {
+  font-family: caraque-solid,sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 section {
@@ -56,6 +67,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #4040d0;
   border: #ff621c solid 3px;
   background-color: rgba(255, 166, 0, 0.3);
   -webkit-backdrop-filter: blur(10px);
@@ -67,5 +79,8 @@ section {
 .container header {
   background-color: #ff621c;
   padding: 1rem 3rem;
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 2px;
 }
 /*# sourceMappingURL=style.css.map */
