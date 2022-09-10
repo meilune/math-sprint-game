@@ -63,9 +63,9 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 700px;
   color: #4040d0;
   border: #ff621c solid 3px;
+  border-radius: 5px;
   background-color: rgba(255, 166, 0, 0.3);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -81,6 +81,7 @@ section {
   font-size: 28px;
   color: #fff;
   letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .game-container .card {
@@ -103,8 +104,10 @@ section {
       -ms-flex-align: center;
           align-items: center;
   border: #4040d0 2px solid;
+  border-radius: 5px;
   padding: 1rem;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
+  cursor: pointer;
 }
 
 .game-container .card .radio-container label {
@@ -132,5 +135,33 @@ section {
       -ms-flex-align: center;
           align-items: center;
   font-size: 18px;
+}
+
+.game-container .card .start {
+  width: 100%;
+  background-color: #4040d0;
+  border: none;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  font-family: caraque-solid,sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.game-container .card .start:hover {
+  background-color: #ff621c;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 10px -7px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 10px -7px;
+}
+
+.selected {
+  background-color: #ff621c;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
