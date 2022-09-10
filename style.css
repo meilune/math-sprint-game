@@ -35,10 +35,6 @@ h1, h2 {
 
 section {
   position: fixed;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,7 +49,75 @@ section {
   background-color: rgba(255, 166, 0, 0.3);
 }
 
-.container {
+.game-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: top;
+      -ms-flex-pack: top;
+          justify-content: top;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 700px;
+  color: #4040d0;
+  border: #ff621c solid 3px;
+  background-color: rgba(255, 166, 0, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.game-container header {
+  background-color: #ff621c;
+  padding: 1rem 3rem;
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.game-container .card {
+  width: 90%;
+  padding: 2rem 0.5rem;
+}
+
+.game-container .card .radio-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: #4040d0 2px solid;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+.game-container .card .radio-container label {
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.game-container .card .radio-container input {
+  display: none;
+}
+
+.game-container .card .radio-container .best-score {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,20 +131,6 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #4040d0;
-  border: #ff621c solid 3px;
-  background-color: rgba(255, 166, 0, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-
-.container header {
-  background-color: #ff621c;
-  padding: 1rem 3rem;
-  font-size: 28px;
-  color: #fff;
-  letter-spacing: 2px;
+  font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */
