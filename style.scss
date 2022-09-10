@@ -38,21 +38,41 @@ h1, h2 {
 }
 
 section {
-    position:fixed;
+    position:absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
     background-color: rgba(255, 166, 0, 0.3);
+    text-align: center;
+}
+
+button {
+    border: none;
+    color: $white;
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    font-family: caraque-solid,sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 10px -7px;
+    }
 }
 
 .game-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: center;
-    // height: 700px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: top;
+    // align-items: center;
+    position: relative;
+    min-height: 700px;
+    width: 570px;
     color: $purple;
     border: $orange solid 3px;
     border-radius: 5px;
@@ -60,8 +80,10 @@ section {
     backdrop-filter: blur(10px);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     box-sizing: border-box;
+    // margin-top: 100px;
     header {
         background-color: $orange;
+        top:0;
         padding: 1rem 3rem;
         font-size: 28px;
         color: $white;
@@ -70,7 +92,7 @@ section {
     }
     .card {
         width: 90%;
-        padding: 2rem 0.5rem;
+        margin: 20px auto 10px;
         .radio-container {
             display: flex;
             flex-direction: row;
@@ -100,22 +122,89 @@ section {
         .start {
             width: 100%;
             background-color: $purple;
-            border: none;
-            color: $white;
-            padding: 1.5rem 2rem;
-            border-radius: 5px;
-            font-family: caraque-solid,sans-serif;
-            font-weight: 700;
-            font-size: 24px;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: all 0.5s;
             &:hover {
                 background-color: $orange;
-                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-                box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 10px -7px;
             }
         }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 35%;
+            font-size: 98px;
+        }
+        .item-container {
+            height: 500px;
+            overflow-y: scroll;
+            position: relative;
+            .selected-item {
+                background: $yellow;
+                position: fixed;
+                margin: auto -28px;
+                top: 375px;
+                z-index: -1;
+                width: 564px;
+                height: 70px;
+              }
+            .item {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+                height: 70px;
+                margin: 0 50px;
+                user-select: none;
+            }
+          }
+          .item-container::-webkit-scrollbar {
+            display: none;
+          }
+          .item-footer {
+                display: flex;
+                flex-wrap: wrap;
+            .wrong, .right {
+                width: 45%;
+                margin: 0.5rem;
+                &:hover {
+                    filter: brightness(120%);
+                }
+              }
+            .wrong {
+                background-color: $orange;
+            }
+            .right {
+                background-color: $purple;
+            }
+          }
+          .score-container {
+            padding-top: 1rem;
+            line-height: 28px;
+            letter-spacing: 2px;
+            .title {
+                font-size: 48px;
+            }
+            .final-time {
+                font-size: 98px;
+                color: $orange;
+            }
+            .base-time {
+                font-weight: 400;
+            }
+            .penalty-time {
+                font-weight: 400;
+                background-color: $yellow;
+                padding: 0.2rem;
+            }
+          }
+          .score-footer {
+            padding-top: 1rem;
+            .play-again {
+                width: 100%;
+                background-color: $orange;
+                &:hover {
+                    background-color: $purple;
+                }
+            }
+          }
     }
 }
 

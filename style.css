@@ -34,7 +34,7 @@ h1, h2 {
 }
 
 section {
-  position: fixed;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,22 +47,33 @@ section {
   width: 100vw;
   height: 100vh;
   background-color: rgba(255, 166, 0, 0.3);
+  text-align: center;
+}
+
+button {
+  border: none;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  font-family: caraque-solid,sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+button:hover {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 10px -7px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 10px -7px;
 }
 
 .game-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: top;
-      -ms-flex-pack: top;
-          justify-content: top;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
+  min-height: 700px;
+  width: 570px;
   color: #4040d0;
   border: #ff621c solid 3px;
   border-radius: 5px;
@@ -77,6 +88,7 @@ section {
 
 .game-container header {
   background-color: #ff621c;
+  top: 0;
   padding: 1rem 3rem;
   font-size: 28px;
   color: #fff;
@@ -86,7 +98,7 @@ section {
 
 .game-container .card {
   width: 90%;
-  padding: 2rem 0.5rem;
+  margin: 20px auto 10px;
 }
 
 .game-container .card .radio-container {
@@ -140,24 +152,126 @@ section {
 .game-container .card .start {
   width: 100%;
   background-color: #4040d0;
-  border: none;
-  color: #fff;
-  padding: 1.5rem 2rem;
-  border-radius: 5px;
-  font-family: caraque-solid,sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  letter-spacing: 2px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 .game-container .card .start:hover {
   background-color: #ff621c;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 10px -7px;
-          box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 10px -7px;
+}
+
+.game-container .card .countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 35%;
+  font-size: 98px;
+}
+
+.game-container .card .item-container {
+  height: 500px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.game-container .card .item-container .selected-item {
+  background: #ffa600;
+  position: fixed;
+  margin: auto -28px;
+  top: 375px;
+  z-index: -1;
+  width: 564px;
+  height: 70px;
+}
+
+.game-container .card .item-container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70px;
+  margin: 0 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.game-container .card .item-container::-webkit-scrollbar {
+  display: none;
+}
+
+.game-container .card .item-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.game-container .card .item-footer .wrong, .game-container .card .item-footer .right {
+  width: 45%;
+  margin: 0.5rem;
+}
+
+.game-container .card .item-footer .wrong:hover, .game-container .card .item-footer .right:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+.game-container .card .item-footer .wrong {
+  background-color: #ff621c;
+}
+
+.game-container .card .item-footer .right {
+  background-color: #4040d0;
+}
+
+.game-container .card .score-container {
+  padding-top: 1rem;
+  line-height: 28px;
+  letter-spacing: 2px;
+}
+
+.game-container .card .score-container .title {
+  font-size: 48px;
+}
+
+.game-container .card .score-container .final-time {
+  font-size: 98px;
+  color: #ff621c;
+}
+
+.game-container .card .score-container .base-time {
+  font-weight: 400;
+}
+
+.game-container .card .score-container .penalty-time {
+  font-weight: 400;
+  background-color: #ffa600;
+  padding: 0.2rem;
+}
+
+.game-container .card .score-footer {
+  padding-top: 1rem;
+}
+
+.game-container .card .score-footer .play-again {
+  width: 100%;
+  background-color: #ff621c;
+}
+
+.game-container .card .score-footer .play-again:hover {
+  background-color: #4040d0;
 }
 
 .selected {
