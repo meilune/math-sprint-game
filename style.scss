@@ -233,3 +233,28 @@ button {
     height: 220px;
     width: 100%;
   }
+
+@media screen and (max-width: 500px) {
+    .game-container{
+        .card {
+            .item-container {
+                .selected-item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+/* Game Page -------------------------- */
+.height-240 {
+    height: 160px;
+    width: 100%;
+  }
+  
+  .height-500 {
+    height: 280px;
+    width: 100%;
+  }
+}
