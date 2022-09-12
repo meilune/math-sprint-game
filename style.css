@@ -300,8 +300,46 @@ button:hover {
   width: 100%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
+  button {
+    padding: 1rem;
+    font-size: 20px;
+  }
+  .game-container {
+    min-height: auto;
+  }
+  .game-container header {
+    padding: 0.5rem 1rem;
+    font-size: 22px;
+  }
+  .game-container .card .countdown {
+    margin-top: 35%;
+    font-size: 68px;
+    margin-bottom: 35%;
+  }
+  .game-container .card .item-container {
+    height: 400px;
+  }
   .game-container .card .item-container .selected-item {
+    width: 100%;
+    top: 255px;
+    margin: auto -26px;
+    height: 60px;
+  }
+  .game-container .card .item-container .item {
+    height: 60px;
+    margin: 0 60px;
+  }
+  .game-container .card .item-footer .wrong, .game-container .card .item-footer .right {
+    width: 100%;
+  }
+  /* Game Page -------------------------- */
+  .height-240 {
+    height: 120px;
+    width: 100%;
+  }
+  .height-500 {
+    height: 220px;
     width: 100%;
   }
 }
@@ -309,11 +347,11 @@ button:hover {
 @media screen and (max-width: 390px) {
   /* Game Page -------------------------- */
   .height-240 {
-    height: 160px;
+    height: 110px;
     width: 100%;
   }
   .height-500 {
-    height: 280px;
+    height: 160px;
     width: 100%;
   }
 }

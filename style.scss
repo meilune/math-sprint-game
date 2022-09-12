@@ -234,27 +234,63 @@ button {
     width: 100%;
   }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
+    button {
+        padding: 1rem;
+        font-size: 20px;
+    }
     .game-container{
+        min-height: auto;
+        header{
+            padding: 0.5rem 1rem;
+            font-size: 22px;
+        }
         .card {
+            .countdown {
+                margin-top: 35%;
+                font-size: 68px;
+                margin-bottom: 35%;
+            }
             .item-container {
+                height: 400px;
                 .selected-item {
                     width: 100%;
+                    top: 255px;
+                    margin: auto -26px;
+                    height: 60px;
+                }
+                .item {
+                    height: 60px;
+                    margin: 0 60px;
                 }
             }
+            .item-footer {
+                .wrong, .right {
+                    width: 100%;
+                  }
+            }
         }
+    }
+        /* Game Page -------------------------- */
+    .height-240 {
+        height: 120px;
+        width: 100%;
+    }
+    
+    .height-500 {
+        height: 220px;
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 390px) {
-/* Game Page -------------------------- */
-.height-240 {
-    height: 160px;
-    width: 100%;
-  }
-  
-  .height-500 {
-    height: 280px;
-    width: 100%;
-  }
+    /* Game Page -------------------------- */
+    .height-240 {
+        height: 110px;
+        width: 100%;
+    }
+    .height-500 {
+        height: 160px;
+        width: 100%;
+    }
 }
