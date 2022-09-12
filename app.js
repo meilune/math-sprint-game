@@ -94,11 +94,32 @@ function getRadioValue() {
     return radioValue;
 }
 
+//Navigate from Splash page to show countdown page;
+function showCountdown() {
+    splashPage.hidden = true;
+    countdownPage.hidden = false;
+    function startCountdown(seconds) {
+        let counter = seconds;
+          
+        const interval = setInterval(() => {
+          console.log(counter);
+          countdown.textContent = counter;
+          counter--;
+            
+          if (counter < 1 ) {
+            clearInterval(interval);
+            console.log('Ding!');
+          }
+        }, 1000);
+      };
+      startCountdown(3);
+}
+
 //Form that decides amount of questions
 function selectQuestionAmount(e) {
     e.preventDefault();
     questionAmount = getRadioValue();
-    console.log(questionAmount);
+    showCountdown();
 }
 
 //Event listeners
