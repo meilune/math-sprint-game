@@ -115,9 +115,7 @@ function scorePageRes() {
 
 //Stop Timer, process results go to Score page
 function checkTime(){
-  console.log(timePlayed);
   if(playerGuessArray.length == questionAmount) {
-    console.log("player guess array: ", playerGuessArray);
     clearInterval(timer);
     //Check wrong guesses, add penalty time
     equationsArray.forEach((equation, index) => {
@@ -190,7 +188,6 @@ function createEquations() {
     equationObject = { value: equation, evaluated: 'false' };
     equationsArray.push(equationObject);
   };
-  console.log(equationsArray);
   shuffle(equationsArray);
 }
 
