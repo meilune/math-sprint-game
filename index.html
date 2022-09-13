@@ -26,7 +26,7 @@
                             <input type="radio" name="questions" value="10" id="value-10">
                             <span class="best-score">
                                 <span>Best Score</span>
-                                <span class="best-score-value">0.0s</span>
+                                <span class="best-score-value"></span>
                             </span>
                         </div>
                         <!-- 25 Questions Radio input -->
@@ -35,7 +35,7 @@
                             <input type="radio" name="questions" value="25" id="value-25">
                             <span class="best-score">
                                 <span>Best Score</span>
-                                <span class="best-score-value">0.0s</span>
+                                <span class="best-score-value"></span>
                             </span>
                         </div>
                         <!-- 50 Questions Radio input -->
@@ -44,7 +44,7 @@
                             <input type="radio" name="questions" value="50" id="value-50">
                             <span class="best-score">
                                 <span>Best Score</span>
-                                <span class="best-score-value">0.0s</span>
+                                <span class="best-score-value"></span>
                             </span>
                         </div>
                         <!-- 99 Questions Radio input -->
@@ -53,7 +53,7 @@
                             <input type="radio" name="questions" value="99" id="value-99">
                             <span class="best-score">
                                 <span>Best Score</span>
-                                <span class="best-score-value">0.0s</span>
+                                <span class="best-score-value"></span>
                             </span>
                         </div>
                     </div>
@@ -77,8 +77,8 @@
                 </div>
                 <!-- Right/Wrong Buttons -->
                 <div class="item-footer">
-                    <button class="wrong">Wrong</button>
-                    <button class="right">Right</button>
+                    <button class="wrong" onclick="select(false)">Wrong</button>
+                    <button class="right" onclick="select(true)">Right</button>
                 </div>
             </div>
 
@@ -92,7 +92,7 @@
                 </div>
                 <!-- Play Again Button -->
                 <div class="score-footer">
-                    <button class="play-again">Play Again</button>
+                    <button class="play-again" onclick="playAgain()" hidden>Play Again</button>
                 </div>
             </div>
         </div>

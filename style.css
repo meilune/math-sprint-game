@@ -324,10 +324,8 @@ button:hover {
     width: 100%;
     top: 255px;
     margin: auto -26px;
-    height: 60px;
   }
   .game-container .card .item-container .item {
-    height: 60px;
     margin: 0 60px;
   }
   .game-container .card .item-footer .wrong, .game-container .card .item-footer .right {
@@ -339,19 +337,7 @@ button:hover {
     width: 100%;
   }
   .height-500 {
-    height: 220px;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  /* Game Page -------------------------- */
-  .height-240 {
-    height: 110px;
-    width: 100%;
-  }
-  .height-500 {
-    height: 160px;
+    height: 210px;
     width: 100%;
   }
 }
